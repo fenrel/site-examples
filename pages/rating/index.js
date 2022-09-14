@@ -54,7 +54,7 @@ function ThankYou({ grade }) {
       </div>
       <p className={styles["thank-you-stat-text"]}>You selected {grade} out of 5!</p>
       <h1 className={styles["thank-you-header-text"]}>Thank you!</h1>      
-      <p className={styles["thank-you-text"]}>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch.</p>
+      <p className={styles["thank-you-text"]}>We appreciate you taking the time to give a rating. If you ever need more support, dont hesitate to get in touch.</p>
     </>
   )
 }
