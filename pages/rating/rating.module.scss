@@ -1,0 +1,102 @@
+$page-font: Overpass;
+$primary-color: hsl(25, 97%, 53%);
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  height: 100%;
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 2rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin circle-button($bg-color) {
+  $size: 2.7rem;
+
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  // border: 1px solid black;
+  line-height: $size;
+  text-align: center;
+  background-color: $bg-color;
+  color: white;
+  cursor: pointer;
+}
+
+.circle {
+  @include circle-button(hsl(216, 12%, 54%));
+}
+
+.circle:hover {
+  background-color: hsl(217, 12%, 63%);
+}
+
+.selected-circle {
+  @include circle-button($primary-color);
+}
+
+.header-text {
+  font-family: $page-font;
+  color: hsl(0, 0, 100%);
+  margin: 0;
+}
+
+.text {
+  font-family: $page-font;
+  font-size: 15px;
+  color: hsl(217, 12%, 63%);
+  margin: 0;
+}
+
+.thank-you-image {
+  text-align: center;
+}
+
+.thank-you-text {
+  @extend .text;
+  text-align: center;
+}
+
+.thank-you-stat-text {
+  @extend .text;
+  text-align: center;
+  color: $primary-color;
+}
+
+.thank-you-header-text {
+  @extend .header-text;
+  text-align: center;
+}
+
+.submit {
+  color: white;
+  background-color: $primary-color;
+  height: 3rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: $primary-color;
+  background-color: white;
+}
+
+@media (min-width: 500px) {
+  .main {
+    max-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
+  }
+}
